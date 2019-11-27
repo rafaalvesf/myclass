@@ -13,24 +13,24 @@
   height: 20px;
   padding: 20px;
   color: black;
-  background-color: #1485b7;
+  background-image: linear-gradient(to bottom, #1485b7, #0079b2, #006cac, #0060a5, #00539d, #004b8d, #00427e, #003a6f, #003254, #002637, #011a1e, #060707);
   font-family: sans-serif;
   text-decoration: none;
   text-align: center;
 }
 .textmenu{
-  color: black;
+  color: rgb(245, 245, 245);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   font-weight: bold;
   padding: 20px;
 }
 .textmenu:hover{
-  color: white;
+  color: rgb(187, 187, 187);
 }
 
 .body{
-  background-image: linear-gradient(to bottom, #1485b7, #0079b2, #006cac, #0060a5, #00539d, #004b8d, #00427e, #003a6f, #003254, #002637, #011a1e, #060707);
+  
   height: 91%;
 }
 .texto{
@@ -44,14 +44,11 @@
     <header> <img src="https://i.ibb.co/xf9NVT5/oie-transparent-1.png" alt=""> </header>
   </div>
   <div class="menu">
-      <a class="textmenu" href="">Menu</a>
-      <a class="textmenu" href="">Clientes</a>
-      <a class="textmenu" href="">Contatos</a>
+      <a class="textmenu" routerLink="" routerLinkActive="active">Menu</a>
+      <a class="textmenu"routerLink="/clientes" routerLinkActive="active">Cadastrar</a>
+      <a class="textmenu" routerLink="/contatos" routerLinkActive="active">Contatos</a>
   </div>
   <div class="body">
-      <div>
-        
-      </div>
+    <router-outlet></router-outlet>
   </div>
 
-<router-outlet></router-outlet>

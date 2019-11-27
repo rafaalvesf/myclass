@@ -1,0 +1,16 @@
+<table class="table-hover">
+    <thead>
+        <th>Nome do Cliente</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <tr *ngFor="let cliente of clientes | async">
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.telefone}}</td>
+            <td>
+                <button class="btn" (click)="edit(cliente, cliente.key)" routerLink="/clientes">Editar</button>
+                <button class="btn btn-danger ml-2" (click)="delete(cliente.key)">Excluir</button>
+            </td>
+        </tr>
+    </thead>
+</table>

@@ -1,0 +1,48 @@
+<style>
+    .form-group{
+        padding: 20px;
+    }
+    .form-card{
+        background: rgba(247,247,247,1);
+        background: -moz-linear-gradient(-45deg, rgba(247,247,247,1) 0%, rgba(20,134,183,1) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(247,247,247,1)), color-stop(100%, rgba(20,134,183,1)));
+        background: -webkit-linear-gradient(-45deg, rgba(247,247,247,1) 0%, rgba(20,134,183,1) 100%);
+        background: -o-linear-gradient(-45deg, rgba(247,247,247,1) 0%, rgba(20,134,183,1) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(247,247,247,1) 0%, rgba(20,134,183,1) 100%);
+        background: linear-gradient(135deg, rgba(247,247,247,1) 0%, rgba(20,134,183,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#1486b7', GradientType=1 );
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 2%;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    }
+    .texto{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+</style>
+
+<h3> Cadastro de Clientes </h3>
+<div class="form-card">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="texto">Nome</label><br>
+            <input type="text" name="nome" [(ngModel)]="cliente.nome" class="form-control" placeholder="Nome do Cliente">
+        </div>
+        <div class="form-group">
+            <label class="texto">CPF</label><br>
+            <input type="text" name="cpf" [(ngModel)]="cliente.cpf" class="form-control" placeholder="Cpf do Cliente">
+        </div>
+        <div class="form-group">
+            <label class="texto">Telefone</label><br>
+            <input type="text" name="telefone" [(ngModel)]="cliente.telefone" class="form-control" placeholder="Telefone do Cliente">
+        </div>
+        <button class="btn"> Gravar </button>
+    </form>
+</div>
