@@ -18,6 +18,10 @@ import { environment } from '../environments/environment';
 import { ListComponent } from '../app/clientes/list/list.component';
 import { EditComponent } from '../app/clientes/edit/edit.component';
 
+import { AgmCoreModule } from '@agm/core';
+
+import { CpfCnpjModule } from 'ng2-cpf-cnpj';
+
 
 
 const routes: Routes = [
@@ -44,6 +48,10 @@ const routes: Routes = [
     [ReactiveFormsModule],
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    CpfCnpjModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAxhqf2Y0ApcQcEHjDHQ4Kie4j15Sf4ZBY'
+    })
   ],
 
   exports: [RouterModule],
